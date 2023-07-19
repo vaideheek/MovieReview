@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #003a88;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moviereview.LoginController">
+   <children>
+      <TextField fx:id="usernameTextField" layoutX="319.0" layoutY="98.0" prefHeight="44.0" prefWidth="204.0" promptText="Username">
+         <font>
+            <Font name="Baskerville" size="17.0" />
+         </font></TextField>
+      <PasswordField fx:id="enterPasswordField" layoutX="319.0" layoutY="157.0" prefHeight="44.0" prefWidth="204.0" promptText="Password">
+         <font>
+            <Font name="Baskerville" size="17.0" />
+         </font></PasswordField>
+      <Button fx:id="signupButton" layoutX="390.0" layoutY="336.0" mnemonicParsing="false" onAction="#signupButtonOnAction" prefHeight="32.0" prefWidth="77.0" style="-fx-background-color: #b0dbf1; -fx-background-radius: 20;" text="Sign Up">
+         <font>
+            <Font name="Baskerville" size="15.0" />
+         </font></Button>
+      <Button fx:id="loginButton" layoutX="446.0" layoutY="218.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="32.0" prefWidth="77.0" style="-fx-background-color: #b0dbf1; -fx-background-radius: 20;" text="Login">
+         <font>
+            <Font name="Baskerville" size="18.0" />
+         </font></Button>
+      <Button fx:id="fypButton" layoutX="349.0" layoutY="282.0" mnemonicParsing="false" onAction="#fypButtonOnAction" style="-fx-background-color: #b0dbf1; -fx-background-radius: 20;" text="Forgot Your Password?">
+         <font>
+            <Font name="Baskerville" size="15.0" />
+         </font></Button>
+      <ImageView fitHeight="189.0" fitWidth="241.0" layoutX="31.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/download.png" />
+         </image>
+      </ImageView>
+      <CheckBox fx:id="rmCheck" layoutX="319.0" layoutY="225.0" mnemonicParsing="false" text="Remember me" textFill="WHITE">
+         <font>
+            <Font name="Baskerville" size="14.0" />
+         </font></CheckBox>
+      <ImageView fx:id="closeButton" fitHeight="45.0" fitWidth="50.0" layoutX="550.0" onMouseClicked="#closeButtonOnExit" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/close.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
