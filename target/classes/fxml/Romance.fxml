@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #003a88;"
+            xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.moviereview.Controllers.RomanceController">
+    <children>
+        <ImageView fitHeight="75.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/download.png"/>
+            </image>
+        </ImageView>
+        <ImageView fx:id="backButton" fitHeight="50.0" fitWidth="57.0" layoutX="547.0" layoutY="3.0"
+                   onMouseClicked="#backButtonOnExit" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/back.png"/>
+            </image>
+        </ImageView>
+        <Label layoutX="219.0" layoutY="10.0" text="Romance" textFill="WHITE">
+            <font>
+                <Font name="Baskerville" size="48.0"/>
+            </font>
+        </Label>
+        <TableView fx:id="tableview" layoutX="13.0" layoutY="108.0" prefHeight="195.0" prefWidth="574.0">
+            <columns>
+                <TableColumn fx:id="movieName" prefWidth="303.0" text="Movie Name"/>
+                <TableColumn fx:id="year" prefWidth="99.0" text="Year"/>
+                <TableColumn fx:id="rating" prefWidth="171.0" text="Rating/10"/>
+            </columns>
+        </TableView>
+        <TextField fx:id="movieNameTextField" layoutX="12.0" layoutY="338.0" promptText="Movie Name">
+            <font>
+                <Font name="Baskerville" size="13.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="yearTextField" layoutX="182.0" layoutY="338.0" promptText="Year">
+            <font>
+                <Font name="Baskerville" size="13.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="ratingTextField" layoutX="352.0" layoutY="338.0" promptText="Rating">
+            <font>
+                <Font name="Baskerville" size="13.0"/>
+            </font>
+        </TextField>
+        <Button fx:id="addButton" layoutX="523.0" layoutY="332.0" mnemonicParsing="false" onAction="#addButtonOnAction"
+                text="Add">
+            <font>
+                <Font name="Baskerville" size="19.0"/>
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
