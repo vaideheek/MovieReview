@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #003a88 #003a88;"
+            xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.moviereview.Controllers.SignUpController">
+    <children>
+        <GridPane layoutX="56.0" layoutY="87.0" prefHeight="207.0" prefWidth="507.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="238.0" minWidth="10.0" prefWidth="148.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="359.0" minWidth="10.0" prefWidth="359.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Label text="Email" textFill="#fcf9f9">
+                    <font>
+                        <Font name="Baskerville" size="18.0"/>
+                    </font>
+                </Label>
+                <Label text="Username" textFill="#fcf9f9" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Baskerville" size="18.0"/>
+                    </font>
+                </Label>
+                <Label prefHeight="24.0" prefWidth="126.0" text="Password" textFill="#fcf9f9" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Baskerville" size="18.0"/>
+                    </font>
+                </Label>
+                <TextField fx:id="emailTextField" style="-fx-border-color: #000000#000000;" GridPane.columnIndex="1">
+                    <font>
+                        <Font name="Baskerville" size="14.0"/>
+                    </font>
+                </TextField>
+                <TextField fx:id="usernameTextField" prefHeight="29.0" prefWidth="363.0"
+                           style="-fx-border-color: #000000#000000;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Baskerville" size="14.0"/>
+                    </font>
+                </TextField>
+                <PasswordField fx:id="passwordField" style="-fx-border-color: #000000;" GridPane.columnIndex="1"
+                               GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Baskerville" size="14.0"/>
+                    </font>
+                </PasswordField>
+            </children>
+        </GridPane>
+        <Button fx:id="SignUpButton" layoutX="248.0" layoutY="319.0" mnemonicParsing="false"
+                onAction="#SignUpButtonOnAction" prefHeight="37.0" prefWidth="104.0"
+                style="-fx-background-color: #b0dbf1 #b0dbf1; -fx-background-radius: 20;" text="Sign Up">
+            <font>
+                <Font name="Baskerville" size="20.0"/>
+            </font>
+        </Button>
+        <ImageView fx:id="backButton" fitHeight="50.0" fitWidth="57.0" layoutX="547.0" layoutY="3.0"
+                   onMouseClicked="#backButtonOnExit" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/back.png"/>
+            </image>
+        </ImageView>
+        <ImageView fitHeight="75.0" fitWidth="120.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/download.png"/>
+            </image>
+        </ImageView>
+        <Label layoutX="217.0" layoutY="37.0" text="Account Details" textFill="WHITE">
+            <font>
+                <Font name="Baskerville" size="26.0"/>
+            </font>
+        </Label>
+        <Label fx:id="MatchMessageLabel" layoutX="60.0" layoutY="349.0" prefHeight="31.0" prefWidth="126.0"
+               textFill="RED">
+            <font>
+                <Font name="Baskerville" size="15.0"/>
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

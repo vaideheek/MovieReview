@@ -1,0 +1,963 @@
+2023-07-22 15:10:12 jdbc[3]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-212]
+	at com.h2database@2.1.212/org.h2.message.DbException.get(DbException.java:223)
+	at com.h2database@2.1.212/org.h2.message.DbException.get(DbException.java:199)
+	at com.h2database@2.1.212/org.h2.message.DbException.get(DbException.java:188)
+	at com.h2database@2.1.212/org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:190)
+	at com.h2database@2.1.212/org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:132)
+	at com.h2database@2.1.212/org.h2.Driver.connect(Driver.java:59)
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:38)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:57)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.addConnections(DriverManagerConnectionProviderImpl.java:448)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:314)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:290)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections$Builder.build(DriverManagerConnectionProviderImpl.java:492)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:99)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:74)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:107)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:246)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:179)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:181)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1215)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1286)
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:56)
+	at java.persistence@2.2/javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:79)
+	at java.persistence@2.2/javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:54)
+	at com.example.moviereview/com.example.moviereview.Models.UserDataManager.<init>(UserDataManager.java:15)
+	at com.example.moviereview/com.example.moviereview.Controllers.LoginController.userDataAuthentication(LoginController.java:77)
+	at com.example.moviereview/com.example.moviereview.Controllers.LoginController.loginButtonOnAction(LoginController.java:61)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:77)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at javafx.base@19.0.2.1/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml@19.0.2.1/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1852)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1724)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@19.0.2.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@19.0.2.1/javafx.scene.Node.fireEvent(Node.java:8923)
+	at javafx.controls@19.0.2.1/javafx.scene.control.Button.fire(Button.java:203)
+	at javafx.controls@19.0.2.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@19.0.2.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@19.0.2.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@19.0.2.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3894)
+	at javafx.graphics@19.0.2.1/javafx.scene.Scene.processMouseEvent(Scene.java:1887)
+	at javafx.graphics@19.0.2.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2620)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@19.0.2.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@19.0.2.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@19.0.2.1/com.sun.glass.ui.mac.MacView.notifyMouse(MacView.java:127)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection was not closed by the application and is garbage collected [90018-212]
+	at com.h2database@2.1.212/org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at com.h2database@2.1.212/org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 90 more
+2023-07-22 20:43:51 jdbc[8]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-212]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:190)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:132)
+	at org.h2.Driver.connect(Driver.java:59)
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:38)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:58)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.addConnections(DriverManagerConnectionProviderImpl.java:409)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:275)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:249)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections$Builder.build(DriverManagerConnectionProviderImpl.java:453)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:98)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:73)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:107)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:246)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:146)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:66)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:178)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:175)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:56)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:79)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:54)
+	at com.example.moviereview.Models.UserDataManager.<init>(UserDataManager.java:15)
+	at com.example.moviereview.Controllers.SignUpController.registerUserValidate(SignUpController.java:80)
+	at com.example.moviereview.Controllers.SignUpController.SignUpButtonOnAction(SignUpController.java:50)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:77)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at javafx.base@19.0.2.1/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml@19.0.2.1/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1852)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1724)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@19.0.2.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@19.0.2.1/javafx.scene.Node.fireEvent(Node.java:8923)
+	at javafx.controls@19.0.2.1/javafx.scene.control.Button.fire(Button.java:203)
+	at javafx.controls@19.0.2.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@19.0.2.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@19.0.2.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@19.0.2.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3894)
+	at javafx.graphics@19.0.2.1/javafx.scene.Scene.processMouseEvent(Scene.java:1887)
+	at javafx.graphics@19.0.2.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2620)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@19.0.2.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@19.0.2.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@19.0.2.1/com.sun.glass.ui.mac.MacView.notifyMouse(MacView.java:127)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection was not closed by the application and is garbage collected [90018-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 90 more
+2023-07-22 20:43:51 jdbc[8]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-212]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:190)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:132)
+	at org.h2.Driver.connect(Driver.java:59)
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:38)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:58)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.addConnections(DriverManagerConnectionProviderImpl.java:409)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:275)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:249)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections$Builder.build(DriverManagerConnectionProviderImpl.java:453)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:98)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:73)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:107)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:246)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:146)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:66)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:178)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:175)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:56)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:79)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:54)
+	at com.example.moviereview.Models.UserDataManager.<init>(UserDataManager.java:15)
+	at com.example.moviereview.Controllers.SignUpController.registerUserValidate(SignUpController.java:80)
+	at com.example.moviereview.Controllers.SignUpController.SignUpButtonOnAction(SignUpController.java:50)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:77)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at javafx.base@19.0.2.1/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml@19.0.2.1/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1852)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1724)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@19.0.2.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@19.0.2.1/javafx.scene.Node.fireEvent(Node.java:8923)
+	at javafx.controls@19.0.2.1/javafx.scene.control.Button.fire(Button.java:203)
+	at javafx.controls@19.0.2.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@19.0.2.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@19.0.2.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@19.0.2.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3894)
+	at javafx.graphics@19.0.2.1/javafx.scene.Scene.processMouseEvent(Scene.java:1887)
+	at javafx.graphics@19.0.2.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2620)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@19.0.2.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@19.0.2.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@19.0.2.1/com.sun.glass.ui.mac.MacView.notifyMouse(MacView.java:127)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection was not closed by the application and is garbage collected [90018-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 90 more
+2023-07-22 20:48:09 jdbc[10]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-212]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:190)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:132)
+	at org.h2.Driver.connect(Driver.java:59)
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:38)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:58)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.addConnections(DriverManagerConnectionProviderImpl.java:409)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:275)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:249)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections$Builder.build(DriverManagerConnectionProviderImpl.java:453)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:98)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:73)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:107)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:246)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:146)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:66)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:178)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:175)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:56)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:79)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:54)
+	at com.example.moviereview.Models.UserDataManager.<init>(UserDataManager.java:15)
+	at com.example.moviereview.Controllers.SignUpController.SignUpButtonOnAction(SignUpController.java:51)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:77)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at javafx.base@19.0.2.1/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml@19.0.2.1/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1852)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1724)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@19.0.2.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@19.0.2.1/javafx.scene.Node.fireEvent(Node.java:8923)
+	at javafx.controls@19.0.2.1/javafx.scene.control.Button.fire(Button.java:203)
+	at javafx.controls@19.0.2.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@19.0.2.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@19.0.2.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@19.0.2.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3894)
+	at javafx.graphics@19.0.2.1/javafx.scene.Scene.processMouseEvent(Scene.java:1887)
+	at javafx.graphics@19.0.2.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2620)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@19.0.2.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@19.0.2.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@19.0.2.1/com.sun.glass.ui.mac.MacView.notifyMouse(MacView.java:127)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection was not closed by the application and is garbage collected [90018-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 89 more
+2023-07-23 17:08:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 17:08:29 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 17:08:29 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.[*]year as year4_0_ from ComedyData comedydata0_"; expected "identifier"; SQL statement:
+select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.year as year4_0_ from ComedyData comedydata0_ [42001-212]
+2023-07-23 17:08:32 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 17:08:32 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.[*]year as year4_0_ from ComedyData comedydata0_"; expected "identifier"; SQL statement:
+select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.year as year4_0_ from ComedyData comedydata0_ [42001-212]
+2023-07-23 17:08:32 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 17:08:32 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.[*]year as year4_0_ from ComedyData comedydata0_"; expected "identifier"; SQL statement:
+select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.year as year4_0_ from ComedyData comedydata0_ [42001-212]
+2023-07-23 17:08:32 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 17:08:32 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.[*]year as year4_0_ from ComedyData comedydata0_"; expected "identifier"; SQL statement:
+select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.year as year4_0_ from ComedyData comedydata0_ [42001-212]
+2023-07-23 17:08:32 jdbc[8]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 17:08:33 jdbc[8]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.[*]year as year4_0_ from ComedyData comedydata0_"; expected "identifier"; SQL statement:
+select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.year as year4_0_ from ComedyData comedydata0_ [42001-212]
+2023-07-23 17:08:33 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 17:08:33 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.[*]year as year4_0_ from ComedyData comedydata0_"; expected "identifier"; SQL statement:
+select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.year as year4_0_ from ComedyData comedydata0_ [42001-212]
+2023-07-23 17:08:33 jdbc[10]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 17:08:33 jdbc[10]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.[*]year as year4_0_ from ComedyData comedydata0_"; expected "identifier"; SQL statement:
+select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.year as year4_0_ from ComedyData comedydata0_ [42001-212]
+2023-07-23 17:08:33 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 17:08:34 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.[*]year as year4_0_ from ComedyData comedydata0_"; expected "identifier"; SQL statement:
+select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.year as year4_0_ from ComedyData comedydata0_ [42001-212]
+2023-07-23 17:08:37 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 17:08:38 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.[*]year as year4_0_ from ComedyData comedydata0_"; expected "identifier"; SQL statement:
+select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.year as year4_0_ from ComedyData comedydata0_ [42001-212]
+2023-07-23 17:08:38 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 17:08:38 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.[*]year as year4_0_ from ComedyData comedydata0_"; expected "identifier"; SQL statement:
+select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.year as year4_0_ from ComedyData comedydata0_ [42001-212]
+2023-07-23 17:08:38 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 17:08:38 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.[*]year as year4_0_ from ComedyData comedydata0_"; expected "identifier"; SQL statement:
+select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.year as year4_0_ from ComedyData comedydata0_ [42001-212]
+2023-07-23 17:09:05 jdbc[15]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 17:09:05 jdbc[15]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.[*]year as year4_0_ from ComedyData comedydata0_"; expected "identifier"; SQL statement:
+select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.year as year4_0_ from ComedyData comedydata0_ [42001-212]
+2023-07-23 17:09:06 jdbc[16]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 17:09:06 jdbc[16]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.[*]year as year4_0_ from ComedyData comedydata0_"; expected "identifier"; SQL statement:
+select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.year as year4_0_ from ComedyData comedydata0_ [42001-212]
+2023-07-23 17:09:06 jdbc[17]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 17:09:06 jdbc[17]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.[*]year as year4_0_ from ComedyData comedydata0_"; expected "identifier"; SQL statement:
+select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.year as year4_0_ from ComedyData comedydata0_ [42001-212]
+2023-07-23 17:09:06 jdbc[18]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 17:09:06 jdbc[18]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.[*]year as year4_0_ from ComedyData comedydata0_"; expected "identifier"; SQL statement:
+select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.year as year4_0_ from ComedyData comedydata0_ [42001-212]
+2023-07-23 17:09:07 jdbc[19]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 17:09:07 jdbc[19]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.[*]year as year4_0_ from ComedyData comedydata0_"; expected "identifier"; SQL statement:
+select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.year as year4_0_ from ComedyData comedydata0_ [42001-212]
+2023-07-23 17:09:07 jdbc[20]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 17:09:07 jdbc[20]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.[*]year as year4_0_ from ComedyData comedydata0_"; expected "identifier"; SQL statement:
+select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.year as year4_0_ from ComedyData comedydata0_ [42001-212]
+2023-07-23 17:09:07 jdbc[21]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 17:09:07 jdbc[21]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.[*]year as year4_0_ from ComedyData comedydata0_"; expected "identifier"; SQL statement:
+select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.year as year4_0_ from ComedyData comedydata0_ [42001-212]
+2023-07-23 17:09:07 jdbc[22]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 17:09:07 jdbc[22]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.[*]year as year4_0_ from ComedyData comedydata0_"; expected "identifier"; SQL statement:
+select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.year as year4_0_ from ComedyData comedydata0_ [42001-212]
+2023-07-23 17:09:08 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 17:09:08 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.[*]year as year4_0_ from ComedyData comedydata0_"; expected "identifier"; SQL statement:
+select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.year as year4_0_ from ComedyData comedydata0_ [42001-212]
+2023-07-23 17:09:08 jdbc[24]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 17:09:08 jdbc[24]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.[*]year as year4_0_ from ComedyData comedydata0_"; expected "identifier"; SQL statement:
+select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.year as year4_0_ from ComedyData comedydata0_ [42001-212]
+2023-07-23 17:09:10 jdbc[25]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 17:09:10 jdbc[25]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.[*]year as year4_0_ from ComedyData comedydata0_"; expected "identifier"; SQL statement:
+select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.year as year4_0_ from ComedyData comedydata0_ [42001-212]
+2023-07-23 17:09:10 jdbc[26]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 17:09:10 jdbc[26]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.[*]year as year4_0_ from ComedyData comedydata0_"; expected "identifier"; SQL statement:
+select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.year as year4_0_ from ComedyData comedydata0_ [42001-212]
+2023-07-23 17:09:10 jdbc[27]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer generated by default as identity, movieName varchar(255), rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 17:09:10 jdbc[27]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.[*]year as year4_0_ from ComedyData comedydata0_"; expected "identifier"; SQL statement:
+select comedydata0_.id as id1_0_, comedydata0_.movieName as movienam2_0_, comedydata0_.rating as rating3_0_, comedydata0_.year as year4_0_ from ComedyData comedydata0_ [42001-212]
+2023-07-23 17:36:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Unknown data type: "NAME"; SQL statement:
+create table ComedyData (id integer generated by default as identity, Movie Name varchar(255) not null, Rating double not null, Release_Year integer not null, primary key (id)) [50004-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.Parser.readIfDataType1(Parser.java:6199)
+	at org.h2.command.Parser.readIfDataType(Parser.java:6040)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:6022)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5897)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:9328)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:9266)
+	at org.h2.command.Parser.parseCreate(Parser.java:6745)
+	at org.h2.command.Parser.parsePrepared(Parser.java:763)
+	at org.h2.command.Parser.parse(Parser.java:691)
+	at org.h2.command.Parser.parse(Parser.java:661)
+	at org.h2.command.Parser.prepareCommand(Parser.java:568)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:563)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:508)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.createTable(AbstractSchemaMigrator.java:278)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:71)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:208)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:192)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:81)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:327)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:56)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:79)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:54)
+	at com.example.moviereview.Models.UserDataManager.<init>(UserDataManager.java:15)
+	at com.example.moviereview.Controllers.LoginController.userDataAuthentication(LoginController.java:72)
+	at com.example.moviereview.Controllers.LoginController.loginButtonOnAction(LoginController.java:55)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:77)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at javafx.base@19.0.2.1/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml@19.0.2.1/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1852)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1724)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@19.0.2.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@19.0.2.1/javafx.scene.Node.fireEvent(Node.java:8923)
+	at javafx.controls@19.0.2.1/javafx.scene.control.Button.fire(Button.java:203)
+	at javafx.controls@19.0.2.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@19.0.2.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@19.0.2.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@19.0.2.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3894)
+	at javafx.graphics@19.0.2.1/javafx.scene.Scene.processMouseEvent(Scene.java:1887)
+	at javafx.graphics@19.0.2.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2620)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@19.0.2.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@19.0.2.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@19.0.2.1/com.sun.glass.ui.mac.MacView.notifyMouse(MacView.java:127)
+2023-07-23 17:36:03 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Unknown data type: "NAME"; SQL statement:
+create table ComedyData (id integer generated by default as identity, Movie Name varchar(255) not null, Rating double not null, Release_Year integer not null, primary key (id)) [50004-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.Parser.readIfDataType1(Parser.java:6199)
+	at org.h2.command.Parser.readIfDataType(Parser.java:6040)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:6022)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5897)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:9328)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:9266)
+	at org.h2.command.Parser.parseCreate(Parser.java:6745)
+	at org.h2.command.Parser.parsePrepared(Parser.java:763)
+	at org.h2.command.Parser.parse(Parser.java:691)
+	at org.h2.command.Parser.parse(Parser.java:661)
+	at org.h2.command.Parser.prepareCommand(Parser.java:568)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:563)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:508)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.createTable(AbstractSchemaMigrator.java:278)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:71)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:208)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:192)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:81)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:327)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:56)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:79)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:54)
+	at com.example.moviereview.Models.ComedyDataManager.<init>(ComedyDataManager.java:15)
+	at com.example.moviereview.Controllers.ComedyController.<init>(ComedyController.java:27)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader$ValueElement.processAttribute(FXMLLoader.java:939)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader$InstanceDeclarationElement.processAttribute(FXMLLoader.java:981)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader$Element.processStartElement(FXMLLoader.java:230)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader$ValueElement.processStartElement(FXMLLoader.java:755)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader.processStartElement(FXMLLoader.java:2845)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2641)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2555)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2523)
+	at com.example.moviereview.Main.loadFxml(Main.java:27)
+	at com.example.moviereview.Main.setScene(Main.java:31)
+	at com.example.moviereview.Controllers.HomepageController.comedyOnClick(HomepageController.java:41)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:77)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at javafx.base@19.0.2.1/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml@19.0.2.1/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1852)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1724)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@19.0.2.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@19.0.2.1/javafx.scene.Scene$ClickGenerator.postProcess(Scene.java:3599)
+	at javafx.graphics@19.0.2.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3903)
+	at javafx.graphics@19.0.2.1/javafx.scene.Scene.processMouseEvent(Scene.java:1887)
+	at javafx.graphics@19.0.2.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2620)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@19.0.2.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@19.0.2.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@19.0.2.1/com.sun.glass.ui.mac.MacView.notifyMouse(MacView.java:127)
+2023-07-23 17:36:36 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMEDYDATA" not found; SQL statement:
+insert into ComedyData (id, Movie Name, Rating, Release_Year) values (null, ?, ?, ?) [42102-212]
+2023-07-23 17:44:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Unknown data type: "NAME"; SQL statement:
+create table ComedyData (id integer generated by default as identity, Movie Name varchar(255) not null, Rating double not null, Release_Year integer not null, primary key (id)) [50004-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.Parser.readIfDataType1(Parser.java:6199)
+	at org.h2.command.Parser.readIfDataType(Parser.java:6040)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:6022)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5897)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:9328)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:9266)
+	at org.h2.command.Parser.parseCreate(Parser.java:6745)
+	at org.h2.command.Parser.parsePrepared(Parser.java:763)
+	at org.h2.command.Parser.parse(Parser.java:691)
+	at org.h2.command.Parser.parse(Parser.java:661)
+	at org.h2.command.Parser.prepareCommand(Parser.java:568)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:563)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:508)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.createTable(AbstractSchemaMigrator.java:278)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:71)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:208)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:192)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:81)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:327)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:56)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:79)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:54)
+	at com.example.moviereview.Models.UserDataManager.<init>(UserDataManager.java:15)
+	at com.example.moviereview.Controllers.LoginController.userDataAuthentication(LoginController.java:72)
+	at com.example.moviereview.Controllers.LoginController.loginButtonOnAction(LoginController.java:55)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:77)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at javafx.base@19.0.2.1/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml@19.0.2.1/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1852)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1724)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@19.0.2.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@19.0.2.1/javafx.scene.Node.fireEvent(Node.java:8923)
+	at javafx.controls@19.0.2.1/javafx.scene.control.Button.fire(Button.java:203)
+	at javafx.controls@19.0.2.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@19.0.2.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@19.0.2.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@19.0.2.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3894)
+	at javafx.graphics@19.0.2.1/javafx.scene.Scene.processMouseEvent(Scene.java:1887)
+	at javafx.graphics@19.0.2.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2620)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@19.0.2.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@19.0.2.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@19.0.2.1/com.sun.glass.ui.mac.MacView.notifyMouse(MacView.java:127)
+2023-07-23 17:44:26 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Unknown data type: "NAME"; SQL statement:
+create table ComedyData (id integer generated by default as identity, Movie Name varchar(255) not null, Rating double not null, Release_Year integer not null, primary key (id)) [50004-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.Parser.readIfDataType1(Parser.java:6199)
+	at org.h2.command.Parser.readIfDataType(Parser.java:6040)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:6022)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5897)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:9328)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:9266)
+	at org.h2.command.Parser.parseCreate(Parser.java:6745)
+	at org.h2.command.Parser.parsePrepared(Parser.java:763)
+	at org.h2.command.Parser.parse(Parser.java:691)
+	at org.h2.command.Parser.parse(Parser.java:661)
+	at org.h2.command.Parser.prepareCommand(Parser.java:568)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:563)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:508)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.createTable(AbstractSchemaMigrator.java:278)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:71)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:208)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:192)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:81)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:327)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:56)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:79)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:54)
+	at com.example.moviereview.Models.ComedyDataManager.<init>(ComedyDataManager.java:15)
+	at com.example.moviereview.Controllers.ComedyController.<init>(ComedyController.java:27)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader$ValueElement.processAttribute(FXMLLoader.java:939)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader$InstanceDeclarationElement.processAttribute(FXMLLoader.java:981)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader$Element.processStartElement(FXMLLoader.java:230)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader$ValueElement.processStartElement(FXMLLoader.java:755)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader.processStartElement(FXMLLoader.java:2845)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2641)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2555)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2523)
+	at com.example.moviereview.Main.loadFxml(Main.java:27)
+	at com.example.moviereview.Main.setScene(Main.java:31)
+	at com.example.moviereview.Controllers.HomepageController.comedyOnClick(HomepageController.java:41)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:77)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at javafx.base@19.0.2.1/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml@19.0.2.1/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1852)
+	at javafx.fxml@19.0.2.1/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1724)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@19.0.2.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@19.0.2.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@19.0.2.1/javafx.scene.Scene$ClickGenerator.postProcess(Scene.java:3599)
+	at javafx.graphics@19.0.2.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3903)
+	at javafx.graphics@19.0.2.1/javafx.scene.Scene.processMouseEvent(Scene.java:1887)
+	at javafx.graphics@19.0.2.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2620)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@19.0.2.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@19.0.2.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@19.0.2.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@19.0.2.1/com.sun.glass.ui.mac.MacView.notifyMouse(MacView.java:127)
+2023-07-23 17:44:58 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMEDYDATA" not found; SQL statement:
+insert into ComedyData (id, Movie Name, Rating, Release_Year) values (null, ?, ?, ?) [42102-212]
+2023-07-23 17:54:22 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer not null, movieName varchar(255) not null, rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer not null, movieName varchar(255) not null, rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 17:54:26 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer not null, movieName varchar(255) not null, rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer not null, movieName varchar(255) not null, rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 17:54:27 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer not null, movieName varchar(255) not null, rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer not null, movieName varchar(255) not null, rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 17:54:40 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMEDYDATA" not found; SQL statement:
+insert into ComedyData (movieName, rating, year, id) values (?, ?, ?, ?) [42102-212]
+2023-07-23 18:06:42 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMEDYDATA" not found; SQL statement:
+insert into ComedyData (movieName, rating, year, id) values (?, ?, ?, ?) [42102-212]
+2023-07-23 18:06:43 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMEDYDATA" not found; SQL statement:
+insert into ComedyData (movieName, rating, year, id) values (?, ?, ?, ?) [42102-212]
+2023-07-23 18:17:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer not null, movieName varchar(255) not null, rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer not null, movieName varchar(255) not null, rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 18:17:27 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table ComedyData (id integer not null, movieName varchar(255) not null, rating double not null, [*]year integer not null, primary key (id))"; expected "identifier"; SQL statement:
+create table ComedyData (id integer not null, movieName varchar(255) not null, rating double not null, year integer not null, primary key (id)) [42001-212]
+2023-07-23 18:17:41 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMEDYDATA" not found; SQL statement:
+insert into ComedyData (movieName, rating, year, id) values (?, ?, ?, ?) [42102-212]
+2023-07-23 18:19:34 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMEDYDATA" not found; SQL statement:
+insert into ComedyData (movieName, rating, year, id) values (Monsters Inc, 2001, 8.1, 1) [42102-212]
+2023-07-23 18:19:47 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMEDYDATA" not found; SQL statement:
+insert into ComedyData (movieName, rating, year, id) values (Monsters Inc, 2001, 8.1, 1) [42102-212]
+2023-07-23 18:24:40 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE ComedyData (\000d\000a    id INT PRIMARY KEY AUTO_INCREMENT,\000d\000a    movieName VARCHAR(255) NOT NULL,\000d\000a    [*]year INT NOT NULL,\000d\000a    rating DOUBLE NOT NULL\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE ComedyData (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    movieName VARCHAR(255) NOT NULL,
+    year INT NOT NULL,
+    rating DOUBLE NOT NULL
+) [42001-212]
+2023-07-23 18:25:46 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMEDYDATA" already exists; SQL statement:
+CREATE TABLE ComedyData (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    movieName VARCHAR(255) NOT NULL,
+    releaseYear INT NOT NULL,
+    rating DOUBLE NOT NULL
+) [42101-212]
+2023-07-23 18:26:20 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]COMEDYDATA"; expected "COMMIT, CREATE, CALL, CHECKPOINT, COMMENT"; SQL statement:
+COMEDYDATA [42001-212]
+2023-07-23 19:52:51 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM COMEDYDATA \000d\000aDELETE [*]FROM ComedyData WHERE id = 13"; SQL statement:
+SELECT * FROM COMEDYDATA 
+DELETE FROM ComedyData WHERE id = 13 [42000-212]
+2023-07-23 19:53:15 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM COMEDYDATA \000d\000aDELETE [*]FROM COMEDYDATA WHERE id = 13"; SQL statement:
+SELECT * FROM COMEDYDATA 
+DELETE FROM COMEDYDATA WHERE id = 13 [42000-212]
+2023-07-23 19:53:22 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]COMEDYDATA"; expected "COMMIT, CREATE, CALL, CHECKPOINT, COMMENT"; SQL statement:
+COMEDYDATA [42001-212]

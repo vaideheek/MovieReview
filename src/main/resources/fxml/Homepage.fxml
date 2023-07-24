@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #003a88;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moviereview.Controllers.HomepageController">
+    <children>
+        <ImageView fitHeight="75.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/download.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="231.0" text="Genres" textFill="WHITE">
+            <font>
+                <Font name="Baskerville" size="48.0" />
+            </font>
+        </Label>
+        <ImageView fx:id="comedy" fitHeight="111.0" fitWidth="104.0" layoutX="46.0" layoutY="92.0" onMouseClicked="#comedyOnClick" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/comedy-icon.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="fantasy" fitHeight="104.0" fitWidth="122.0" layoutX="248.0" layoutY="92.0" onMouseClicked="#fantasyOnClick" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/fantasy.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="horror" fitHeight="104.0" fitWidth="122.0" layoutX="442.0" layoutY="92.0" onMouseClicked="#horrorOnClick" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/horror.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="romance" fitHeight="104.0" fitWidth="122.0" layoutX="137.0" layoutY="252.0" onMouseClicked="#romanceOnClick" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/romance.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="scifi" fitHeight="111.0" fitWidth="112.0" layoutX="352.0" layoutY="248.0" onMouseClicked="#scifiOnClick" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/scifi.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="57.0" layoutY="200.0" text="Comedy" textFill="WHITE">
+            <font>
+                <Font name="Baskerville" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="263.0" layoutY="200.0" text="Fantasy" textFill="WHITE">
+            <font>
+                <Font name="Baskerville" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="459.0" layoutY="200.0" text="Horror" textFill="WHITE">
+            <font>
+                <Font name="Baskerville" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="142.0" layoutY="359.0" text="Romance" textFill="WHITE">
+            <font>
+                <Font name="Baskerville" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="379.0" layoutY="359.0" text="Sci-Fi" textFill="WHITE">
+            <font>
+                <Font name="Baskerville" size="24.0" />
+            </font>
+        </Label>
+      <Button fx:id="logOutButton" layoutX="489.0" layoutY="20.0" mnemonicParsing="false" onAction="#logOutButtonOnAction" style="-fx-background-color: #b0dbf1; -fx-background-radius: 20;" text="Logout">
+         <font>
+            <Font name="Baskerville" size="19.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>
