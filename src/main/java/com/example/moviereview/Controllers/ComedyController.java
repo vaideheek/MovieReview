@@ -71,10 +71,6 @@ public class ComedyController implements Initializable {
             new ComedyData("777 Charlie", 2022, 8.8),
             new ComedyData("Spider-Man: Into the Spider-Verse", 2018, 8.4),
             new ComedyData("Toy Story", 1995, 8.3)
-            //new ComedyData("The Grand Budapest Hotel", 2014, 8.1),
-            //new ComedyData("Monsters, Inc.", 2001, 8.1),
-            //new ComedyData("Sholay", 1975, 7.9)
-
     );
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

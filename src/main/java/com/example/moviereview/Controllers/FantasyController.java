@@ -65,12 +65,8 @@ public class FantasyController implements Initializable {
 
     }
     private final ObservableList<FantasyData> observableList = FXCollections.observableArrayList(
-            new FantasyData(" The Lord of the Rings: The Return of the King", 2003, 9.0),
-            new FantasyData(" Star Wars: Episode V - The Empire Strikes Back", 1980, 8.7),
-            new FantasyData(" It's a Wonderful Life", 1946, 8.6)
-           // new FantasyData(" Pirates of the Caribbean: The Curse of the Black Pearl ", 2003, 8.1),
-            //new FantasyData(" Harry Potter and the Deathly Hallows: Part 2", 2011, 8.1),
-            //new FantasyData(" The Little Prince ", 2015, 7.7)
+
+
     );
 
     @Override
